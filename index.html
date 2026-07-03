@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Команда Суслики — УБС</title>
+    <style>
+      * {
+        font-size: 1em;
+        font-family: sans-serif;
+        form { width:500px;height:100px;background:url(bg.png); }
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+  <img src="user.png" alt="User" height="64" width="64">
+    </form>
+    <p>Привет! Это сайт команды Суслики и продукта УБС.</p>
+    <img src="UBS.png" alt="User" height="256" width="256">
+    <p>Качай →</p>
+    <button id="dlBtn">Скачать игру WIN</button>
+        <a href="mailto:komandasusliki@yandex.ru?subject=Вопрос по игре&body=Здравствуйте! Можете помочь?">Задать вопрос</a>
+    
+
+    <script>
+      document.getElementById('dlBtn').addEventListener('click', () => {
+        const a = document.createElement('a');
+        a.href = 'assets/UBS.exe';
+        a.download = 'UBS.exe';
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      });
+    </script>
+  </body>
+</html>
